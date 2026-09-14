@@ -67,6 +67,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -75,6 +77,8 @@ body {
   color: var(--text-primary);
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   position: relative;
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(253, 242, 246, 0.65) 0%, transparent 40%),
@@ -178,11 +182,11 @@ h1, h2, h3, h4, .serif-font {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-size: clamp(2.2rem, 5.5vw, 4.5rem);
 }
 
 h2 {
-  font-size: clamp(2.1rem, 4vw, 3.25rem);
+  font-size: clamp(1.8rem, 4vw, 3.25rem);
 }
 
 h3 {
@@ -1782,43 +1786,183 @@ h4 {
 }
 
 @media (max-width: 768px) {
-  .nav-menu,
+  /* Container Padding */
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Navigation & Mobile Toggle */
+  .nav-menu {
+    display: none;
+  }
   .nav-actions {
+    display: flex;
+    align-items: center;
+  }
+  .nav-actions .btn-nav-wa {
     display: none;
   }
   .mobile-toggle {
     display: block;
   }
+  .luxury-nav:not(.scrolled):not(.light-nav) .hamburger-line {
+    background-color: #ffffff;
+  }
+  .luxury-nav.scrolled .hamburger-line,
+  .luxury-nav.light-nav .hamburger-line {
+    background-color: var(--text-primary);
+  }
+
+  /* Hero Section */
+  .hero-photography-first {
+    min-height: 90vh;
+    padding-bottom: 3.5rem;
+  }
+  .hero-brand-name {
+    font-size: clamp(2.5rem, 8.5vw, 3.8rem);
+  }
+  .hero-brand-sub {
+    letter-spacing: 0.22em;
+  }
+  .hero-tagline {
+    font-size: clamp(1.2rem, 4.2vw, 1.55rem);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Brand Intro */
   .brand-intro-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
+  .intro-image-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Signature Services */
   .services-editorial-grid {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
+  .service-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Featured Decoration — Full Width Clean Mobile Stack */
   .editorial-masonry-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .editorial-cell {
+    width: 100%;
   }
   .cell-large {
     grid-row: auto;
-    min-height: 360px;
+    grid-column: auto;
+    min-height: unset;
+    aspect-ratio: 16 / 10;
+    width: 100%;
   }
+  .cell-medium-1,
+  .cell-medium-2 {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+  }
+
+  /* The Experience */
   .experience-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
+  .experience-card {
+    padding: 1.75rem 1.35rem;
+  }
+
+  /* Awards Recognition */
+  .awards-container {
+    padding: 2.5rem 1.25rem;
+  }
+  .awards-floral-border {
+    inset: 8px;
+  }
+  .founder-nomination-name {
+    font-size: 2rem;
+  }
+  .award-nomination-title {
+    font-size: 1.2rem;
+  }
+
+  /* Instagram */
   .insta-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  /* Final CTA & Prevent SVG Overflow */
+  .floral-silhouette-bg {
+    display: none;
+  }
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-actions a {
+    width: 100%;
+  }
+
+  /* About & Services Inner Pages */
+  .about-hero-grid,
+  .about-founder-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
   }
   .approach-pillars-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+  .service-full-row {
+    padding: 2.5rem 0;
+    gap: 1.75rem;
+  }
+
+  /* Gallery */
   .gallery-editorial-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+  .gallery-card.tall .gallery-card-media,
+  .gallery-card.wide .gallery-card-media,
+  .gallery-card.square .gallery-card-media,
+  .gallery-card .gallery-card-media {
+    aspect-ratio: 16 / 10;
+  }
+  .gallery-card-info {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(28, 14, 20, 0.85) 0%, transparent 100%);
+  }
+
+  /* Contact Form */
   .form-grid-2 {
     grid-template-columns: 1fr;
+    gap: 0;
   }
+  .enquiry-form-card {
+    padding: 1.85rem 1.25rem;
+  }
+
+  /* Footer */
   .footer-top-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
   }
 }
