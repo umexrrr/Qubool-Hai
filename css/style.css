@@ -945,9 +945,10 @@ h4 {
 
 .editorial-masonry-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  grid-template-rows: auto auto;
-  gap: 2rem;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.75rem;
+  align-items: stretch;
+  width: 100%;
 }
 
 .editorial-cell {
@@ -961,20 +962,41 @@ h4 {
 
 .editorial-cell:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow-floating);
 }
 
 .cell-large {
-  grid-row: 1 / 3;
-  aspect-ratio: 16 / 10;
-  min-height: 520px;
+  height: 100%;
+  min-height: 480px;
+  display: flex;
 }
 
-.cell-medium-1 {
-  aspect-ratio: 4 / 3;
+.cell-large .editorial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+.editorial-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.cell-medium-1,
 .cell-medium-2 {
-  aspect-ratio: 4 / 3;
+  flex: 1;
+  aspect-ratio: 16 / 10;
+  display: flex;
+}
+
+.cell-medium-1 .editorial-img,
+.cell-medium-2 .editorial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .editorial-img {
@@ -1852,8 +1874,8 @@ h4 {
 
   /* Featured Decoration — Full Width Clean Mobile Stack */
   .editorial-masonry-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
     width: 100%;
   }
@@ -1861,16 +1883,23 @@ h4 {
     width: 100%;
   }
   .cell-large {
-    grid-row: auto;
-    grid-column: auto;
     min-height: unset;
+    height: auto;
     aspect-ratio: 16 / 10;
+    width: 100%;
+  }
+  .editorial-right-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     width: 100%;
   }
   .cell-medium-1,
   .cell-medium-2 {
     aspect-ratio: 16 / 10;
     width: 100%;
+    min-height: unset;
+    height: auto;
   }
 
   /* The Experience */
