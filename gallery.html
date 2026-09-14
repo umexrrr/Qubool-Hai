@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery of Our Work — Qubool Hai Events &amp; Decor Indore</title>
+  <meta name="description" content="Explore real decoration photography by Qubool Hai Events &amp; Decor. Bespoke Nikah backdrops, luxury floral stages, intimate home setups in Indore.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+
+  <!-- Page Transition Veil -->
+  <div class="page-veil"></div>
+
+  <!-- Signature Floating Petal Canvas -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="luxury-nav light-nav" id="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Qubool Hai Events &amp; Decor Home">
+        <span class="brand-name">Qubool Hai</span>
+        <span class="brand-subtitle">EVENTS &amp; DECOR</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/919301266908?text=Hello%20Qubool%20Hai%20Events%20%26%20Decor%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20your%20decor%20work." target="_blank" rel="noopener noreferrer" class="btn-nav-wa" aria-label="Chat on WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.771.78 2.796.78 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.766-5.768-5.766zm9.969 5.767c0 5.523-4.478 10-10 10-1.745 0-3.378-.45-4.81-1.237l-5.19 1.362 1.39-5.074c-.886-1.499-1.39-3.243-1.39-5.051 0-5.523 4.477-10 10-10s10 4.477 10 10z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-menu">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="gallery.html" class="mobile-nav-link active">Gallery</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="https://wa.me/919301266908?text=Hello%20Qubool%20Hai%20Events%20%26%20Decor%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20your%20decor%20work." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+        WhatsApp +91 9301266908
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         GALLERY HERO
+         ========================================================================== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="subheading-eyebrow">Portfolio of Celebrations</span>
+        <h1 class="page-hero-title">Our Work</h1>
+        <p class="page-hero-lead lead-editorial">
+          “Celebrations designed with detail, feeling and intention.”
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         GALLERY SECTION WITH FILTER & MASONRY
+         ========================================================================== -->
+    <section class="section-spacing" style="padding-top: 3.5rem;">
+      <div class="container">
+        
+        <!-- Filter Tabs -->
+        <div class="gallery-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Celebrations</button>
+          <button class="filter-btn" data-filter="nikah">Nikah</button>
+          <button class="filter-btn" data-filter="stage">Stage</button>
+          <button class="filter-btn" data-filter="floral">Floral</button>
+          <button class="filter-btn" data-filter="home">Home Events</button>
+          <button class="filter-btn" data-filter="weddings">Weddings</button>
+        </div>
+
+        <!-- Editorial Masonry Grid -->
+        <div class="gallery-editorial-grid">
+          
+          <!-- Card 1: Nikah (Tall 4:5) -->
+          <div class="gallery-card tall" data-category="nikah">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY NIKAH 01 -->
+              <img src="public/images/gallery/gallery-nikah-01.jpg" alt="Bespoke Nikah stage with circular floral arch" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Circular Floral Nikah Arch</h3>
+                  <span class="gallery-card-cat">Nikah Ceremony</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Stage (Wide 16:9) -->
+          <div class="gallery-card wide" data-category="stage">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY STAGE 01 -->
+              <img src="public/images/gallery/gallery-stage-01.jpg" alt="Grand Nikah and wedding stage decor with chandeliers" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Grand Crystal Stage</h3>
+                  <span class="gallery-card-cat">Stage Décor</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Nikah (Tall 4:5) -->
+          <div class="gallery-card tall" data-category="nikah">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY NIKAH 02 -->
+              <img src="public/images/gallery/gallery-nikah-02.jpg" alt="Ceremonial Nikah signing table with calligraphy stand" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Ceremonial Signing Table</h3>
+                  <span class="gallery-card-cat">Nikah Details</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Floral (Square 1:1) -->
+          <div class="gallery-card square" data-category="floral">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY FLORAL 02 -->
+              <img src="public/images/gallery/gallery-floral-02.jpg" alt="Wedding aisle with baby pink rose petals and candles" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Aisle of Petals &amp; Glow</h3>
+                  <span class="gallery-card-cat">Floral Artistry</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Weddings (Wide 16:9) -->
+          <div class="gallery-card wide" data-category="weddings">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY WEDDING 01 -->
+              <img src="public/images/gallery/gallery-wedding-01.jpg" alt="Grand ballroom wedding reception decor in soft pink" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Grand Ballroom Reception</h3>
+                  <span class="gallery-card-cat">Grand Wedding</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Home (Standard 4:3) -->
+          <div class="gallery-card" data-category="home">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY HOME 01 -->
+              <img src="public/images/gallery/gallery-home-01.jpg" alt="Intimate home-based Nikah decor with floor diwan seating" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Intimate Home Nikah</h3>
+                  <span class="gallery-card-cat">Home Celebrations</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Floral (Standard 4:3) -->
+          <div class="gallery-card" data-category="floral">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY FLORAL 01 -->
+              <img src="public/images/gallery/gallery-floral-01.jpg" alt="Cascading luxury floral urn with blush roses" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Cascading Floral Urn</h3>
+                  <span class="gallery-card-cat">Floral Styling</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Nikah (Standard 4:3) -->
+          <div class="gallery-card" data-category="nikah">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY NIKAH 03 -->
+              <img src="public/images/gallery/gallery-nikah-03.jpg" alt="Mughal arched geometric backdrop with blush roses" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Geometric Arched Backdrop</h3>
+                  <span class="gallery-card-cat">Custom Backdrop</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Weddings (Standard 4:3) -->
+          <div class="gallery-card" data-category="weddings">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY WEDDING 02 -->
+              <img src="public/images/gallery/gallery-wedding-02.jpg" alt="Ambient lighting installation with suspended fairy lights" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Canopy of Fairy Stars</h3>
+                  <span class="gallery-card-cat">Lighting &amp; Ambience</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10: Stage (Wide 16:9) -->
+          <div class="gallery-card wide" data-category="stage">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY STAGE 02 -->
+              <img src="public/images/gallery/gallery-stage-02.jpg" alt="Royal floral Nikah sanctuary with ambient candles" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Sanctuary of White &amp; Blush</h3>
+                  <span class="gallery-card-cat">Stage Décor</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 11: Weddings (Standard 4:3) -->
+          <div class="gallery-card" data-category="weddings">
+            <div class="gallery-card-media">
+              <!-- EDITABLE IMAGE: GALLERY EVENT 01 -->
+              <img src="public/images/gallery/gallery-event-01.jpg" alt="Arched welcome mirrors with calligraphy at wedding entrance" class="gallery-card-img" loading="lazy">
+              <div class="gallery-card-info">
+                <div>
+                  <h3 class="gallery-card-title">Arched Foyer Entrance</h3>
+                  <span class="gallery-card-cat">Event Styling</span>
+                </div>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FULLSCREEN LIGHTBOX MODAL
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo View">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="lightbox-img-wrapper">
+        <img src="" alt="" class="lightbox-img">
+      </div>
+      <div class="lightbox-caption">
+        <h3 class="lightbox-title" style="color: #ffffff; font-size: 1.6rem;">Title</h3>
+        <span class="lightbox-cat" style="color: #f7d2e0; font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase;">Category</span>
+        <div style="margin-top: 0.75rem;">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp lightbox-wa-btn" style="padding: 0.65rem 1.6rem; font-size: 0.8rem;">
+            Enquire About This Setup
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="index.html" class="brand-logo">
+            <span class="brand-name">Qubool Hai</span>
+            <span class="brand-subtitle">EVENTS &amp; DECOR</span>
+          </a>
+          <p class="footer-brand-bio">
+            Bespoke Nikah ceremonies, artistic floral styling, custom backdrops, and majestic wedding environments based in Indore, Madhya Pradesh.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Our Studio</a></li>
+            <li><a href="services.html" class="footer-link">Services &amp; Offerings</a></li>
+            <li><a href="gallery.html" class="footer-link">Work Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Enquire With Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Specializations</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#nikah" class="footer-link">Bespoke Nikah Décor</a></li>
+            <li><a href="services.html#backdrops" class="footer-link">Custom Backdrops</a></li>
+            <li><a href="services.html#floral" class="footer-link">Floral Arrangements</a></li>
+            <li><a href="services.html#stage" class="footer-link">Stage Decoration</a></li>
+            <li><a href="services.html#lighting" class="footer-link">Royal &amp; Ambient Lighting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Studio Location</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+            Lasudiya Mori, Vistara Twp, Talawali Chanda,<br>
+            Indore, Madhya Pradesh 452016, India
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="https://wa.me/919301266908" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--text-rose); font-weight: 600;">
+              WhatsApp: +91 9301266908
+            </a>
+            <a href="https://www.instagram.com/qubool_hai._/?hl=en" target="_blank" rel="noopener noreferrer" class="footer-link">
+              Instagram: @qubool_hai._
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 Qubool Hai Events &amp; Decor. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <span>Baby Pink × White Contemporary Wedding Design</span>
+          <span>Indore, MP</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Floating WhatsApp Button -->
+  <a href="https://wa.me/919301266908?text=Hello%20Qubool%20Hai%20Events%20%26%20Decor%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20your%20wedding%20and%20event%20decor%20services." target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Contact Qubool Hai on WhatsApp">
+    <div class="wa-pulse"></div>
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.771.78 2.796.78 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.766-5.768-5.766zm9.969 5.767c0 5.523-4.478 10-10 10-1.745 0-3.378-.45-4.81-1.237l-5.19 1.362 1.39-5.074c-.886-1.499-1.39-3.243-1.39-5.051 0-5.523 4.477-10 10-10s10 4.477 10 10z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
