@@ -281,7 +281,7 @@ function initGalleryFilterAndLightbox() {
 
       if (lightboxWaBtn) {
         const msg = encodeURIComponent(`Hello Qubool Hai Events & Decor, I loved this decor setup: "${title}" (${cat}). I would love to enquire about having something similar for my celebration.`);
-        lightboxWaBtn.href = `https://wa.me/919301266908?text=${msg}`;
+        lightboxWaBtn.href = `https://wa.me/917999321717?text=${msg}`;
       }
 
       lightbox.classList.add('is-active');
@@ -340,7 +340,7 @@ ${message}
 _Sent via Qubool Hai website enquiry form_`;
 
     const encodedText = encodeURIComponent(waText);
-    const waUrl = `https://wa.me/919301266908?text=${encodedText}`;
+    const waUrl = `https://wa.me/917999321717?text=${encodedText}`;
 
     // Provide visual confirmation & redirect to WhatsApp
     const submitBtn = form.querySelector('button[type="submit"]');
