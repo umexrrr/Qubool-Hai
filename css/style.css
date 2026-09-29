@@ -789,8 +789,8 @@ h4 {
 /* Page Standard Hero */
 .page-hero {
   position: relative;
-  padding-top: calc(var(--header-height) + 4.5rem);
-  padding-bottom: 4.5rem;
+  padding-top: calc(var(--header-height) + 2.75rem);
+  padding-bottom: 4rem;
   background: var(--grad-pink-soft);
   text-align: center;
   overflow: hidden;
@@ -2072,15 +2072,26 @@ select:focus-visible {
    BREADCRUMBS NAVIGATION (SEO & Hierarchy)
    ========================================================================== */
 .breadcrumbs-nav {
-  padding: 1.25rem 0 0.5rem;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 1.35rem;
 }
+
+/* Defensive safeguard in case breadcrumbs-nav is rendered as direct child of main before hero */
+main > .breadcrumbs-nav:first-child {
+  padding-top: calc(var(--header-height) + 1.25rem);
+  padding-bottom: 0.5rem;
+}
+
 .breadcrumbs-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
   color: var(--text-muted);
 }
 .breadcrumbs-list a {
@@ -2092,7 +2103,7 @@ select:focus-visible {
 }
 .breadcrumbs-separator {
   color: var(--border-pink-medium);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   user-select: none;
 }
 .breadcrumbs-current {
