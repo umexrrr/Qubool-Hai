@@ -7,6 +7,16 @@
   <meta name="description" content="Qubool Hai Events &amp; Decor brings together bespoke Nikah ceremonies, custom floral backdrops, and luxury stage styling in Indore. Founded by Azhar Kazi.">
   <link rel="stylesheet" href="css/style.css?v=2.2">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <script>
+    (function(){
+      var p = window.location.pathname;
+      if (p.endsWith('/index.html') || p === '/index.html' || p.endsWith('index.html')) {
+        window.history.replaceState(null, '', (p.replace(/index\.html$/, '') || '/') + window.location.search + window.location.hash);
+      } else if (p.endsWith('.html')) {
+        window.history.replaceState(null, '', p.replace(/\.html$/, '') + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -19,18 +29,18 @@
   <!-- Navigation Bar -->
   <header class="luxury-nav" id="main-nav">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="Qubool Hai Events &amp; Decor Home">
+      <a href="/" class="brand-logo" aria-label="Qubool Hai Events &amp; Decor Home">
         <span class="brand-name">Qubool Hai</span>
         <span class="brand-subtitle">EVENTS &amp; DECOR</span>
       </a>
 
       <nav aria-label="Primary Navigation">
         <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="/" class="nav-link active">Home</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+          <li><a href="/services" class="nav-link">Services</a></li>
+          <li><a href="/gallery" class="nav-link">Gallery</a></li>
+          <li><a href="/contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -56,11 +66,11 @@
   <!-- Mobile Fullscreen Drawer Menu -->
   <div class="mobile-drawer" id="mobile-menu">
     <ul class="mobile-nav-list">
-      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-      <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/" class="mobile-nav-link active">Home</a></li>
+      <li><a href="/about" class="mobile-nav-link">About</a></li>
+      <li><a href="/services" class="mobile-nav-link">Services</a></li>
+      <li><a href="/gallery" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
     </ul>
     <div class="mobile-drawer-footer">
       <a href="https://wa.me/917999321717?text=Hello%20Qubool%20Hai%20Events%20%26%20Decor%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20your%20wedding%20and%20event%20decor%20services." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
@@ -133,7 +143,7 @@
             </p>
 
             <div style="margin-top: 1rem;">
-              <a href="about.html" class="editorial-link">
+              <a href="/about" class="editorial-link">
                 <span>Discover Our Story</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -170,7 +180,7 @@
               <span class="service-index">01</span>
               <h3 class="service-title">Nikah Décor</h3>
               <p class="service-description">Elegant spaces created for meaningful Nikah ceremonies, crafted with reverent beauty and serene comfort.</p>
-              <a href="services.html#nikah" class="editorial-link" style="margin-top: auto;">Learn More →</a>
+              <a href="/services#nikah" class="editorial-link" style="margin-top: auto;">Learn More →</a>
             </div>
           </article>
 
@@ -184,7 +194,7 @@
               <span class="service-index">02</span>
               <h3 class="service-title">Floral Styling</h3>
               <p class="service-description">Soft, artistic floral arrangements designed around your celebration, pairing blush garden roses with ivory botanicals.</p>
-              <a href="services.html#floral" class="editorial-link" style="margin-top: auto;">Learn More →</a>
+              <a href="/services#floral" class="editorial-link" style="margin-top: auto;">Learn More →</a>
             </div>
           </article>
 
@@ -198,7 +208,7 @@
               <span class="service-index">03</span>
               <h3 class="service-title">Custom Backdrops</h3>
               <p class="service-description">Personalized backdrops that become part of the story, featuring signature calligraphy and architectural arches.</p>
-              <a href="services.html#backdrops" class="editorial-link" style="margin-top: auto;">Learn More →</a>
+              <a href="/services#backdrops" class="editorial-link" style="margin-top: auto;">Learn More →</a>
             </div>
           </article>
 
@@ -212,7 +222,7 @@
               <span class="service-index">04</span>
               <h3 class="service-title">Stage Décor</h3>
               <p class="service-description">Statement stages designed with balance, detail and atmosphere, providing an unforgettable backdrop for your vows.</p>
-              <a href="services.html#stage" class="editorial-link" style="margin-top: auto;">Learn More →</a>
+              <a href="/services#stage" class="editorial-link" style="margin-top: auto;">Learn More →</a>
             </div>
           </article>
 
@@ -226,7 +236,7 @@
               <span class="service-index">05</span>
               <h3 class="service-title">Lighting</h3>
               <p class="service-description">Lighting that transforms the mood and character of the venue with soft candle arrays and twinkling fairy canopies.</p>
-              <a href="services.html#lighting" class="editorial-link" style="margin-top: auto;">Learn More →</a>
+              <a href="/services#lighting" class="editorial-link" style="margin-top: auto;">Learn More →</a>
             </div>
           </article>
 
@@ -240,7 +250,7 @@
               <span class="service-index">06</span>
               <h3 class="service-title">Home &amp; Grand Celebrations</h3>
               <p class="service-description">From intimate home setups to grand wedding environments, tailored with unconditional care and refinement.</p>
-              <a href="services.html#home" class="editorial-link" style="margin-top: auto;">Learn More →</a>
+              <a href="/services#home" class="editorial-link" style="margin-top: auto;">Learn More →</a>
             </div>
           </article>
         </div>
@@ -257,7 +267,7 @@
             <span class="subheading-eyebrow">Visual Narrative</span>
             <h2>A Little Look at Our Work</h2>
           </div>
-          <a href="gallery.html" class="editorial-link" style="font-size: 1.3rem;">
+          <a href="/gallery" class="editorial-link" style="font-size: 1.3rem;">
             <span>View Full Gallery</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -441,7 +451,7 @@
         </p>
 
         <div class="cta-actions">
-          <a href="contact.html" class="btn-primary">
+          <a href="/contact" class="btn-primary">
             <span>Start Your Enquiry</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -468,7 +478,7 @@
       <div class="footer-top-grid">
         <!-- Col 1: Brand Info -->
         <div>
-          <a href="index.html" class="brand-logo">
+          <a href="/" class="brand-logo">
             <span class="brand-name">Qubool Hai</span>
             <span class="brand-subtitle">EVENTS &amp; DECOR</span>
           </a>
@@ -481,11 +491,11 @@
         <div>
           <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="about.html" class="footer-link">About Our Studio</a></li>
-            <li><a href="services.html" class="footer-link">Services &amp; Offerings</a></li>
-            <li><a href="gallery.html" class="footer-link">Work Gallery</a></li>
-            <li><a href="contact.html" class="footer-link">Enquire With Us</a></li>
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/about" class="footer-link">About Our Studio</a></li>
+            <li><a href="/services" class="footer-link">Services &amp; Offerings</a></li>
+            <li><a href="/gallery" class="footer-link">Work Gallery</a></li>
+            <li><a href="/contact" class="footer-link">Enquire With Us</a></li>
           </ul>
         </div>
 
@@ -493,11 +503,11 @@
         <div>
           <h4 class="footer-col-title">Specializations</h4>
           <ul class="footer-links-list">
-            <li><a href="services.html#nikah" class="footer-link">Bespoke Nikah Décor</a></li>
-            <li><a href="services.html#backdrops" class="footer-link">Custom Backdrops</a></li>
-            <li><a href="services.html#floral" class="footer-link">Floral Arrangements</a></li>
-            <li><a href="services.html#stage" class="footer-link">Stage Decoration</a></li>
-            <li><a href="services.html#lighting" class="footer-link">Royal &amp; Ambient Lighting</a></li>
+            <li><a href="/services#nikah" class="footer-link">Bespoke Nikah Décor</a></li>
+            <li><a href="/services#backdrops" class="footer-link">Custom Backdrops</a></li>
+            <li><a href="/services#floral" class="footer-link">Floral Arrangements</a></li>
+            <li><a href="/services#stage" class="footer-link">Stage Decoration</a></li>
+            <li><a href="/services#lighting" class="footer-link">Royal &amp; Ambient Lighting</a></li>
           </ul>
         </div>
 
@@ -524,7 +534,7 @@
           &copy; 2026 Qubool Hai Events &amp; Decor. All rights reserved.
         </div>
         <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; align-items: center;">
-          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="/privacy-policy" class="footer-legal-link">Privacy Policy</a>
           <span>Indore, MP</span>
         </div>
       </div>

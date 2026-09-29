@@ -7,6 +7,16 @@
   <meta name="description" content="Privacy Policy for Qubool Hai Events &amp; Decor, Indore. Learn how we handle your enquiry information, event details, and personal data.">
   <link rel="stylesheet" href="css/style.css?v=2.2">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <script>
+    (function(){
+      var p = window.location.pathname;
+      if (p.endsWith('/index.html') || p === '/index.html' || p.endsWith('index.html')) {
+        window.history.replaceState(null, '', (p.replace(/index\.html$/, '') || '/') + window.location.search + window.location.hash);
+      } else if (p.endsWith('.html')) {
+        window.history.replaceState(null, '', p.replace(/\.html$/, '') + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -19,18 +29,18 @@
   <!-- Navigation Bar -->
   <header class="luxury-nav light-nav" id="main-nav">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="Qubool Hai Events &amp; Decor Home">
+      <a href="/" class="brand-logo" aria-label="Qubool Hai Events &amp; Decor Home">
         <span class="brand-name">Qubool Hai</span>
         <span class="brand-subtitle">EVENTS &amp; DECOR</span>
       </a>
 
       <nav aria-label="Primary Navigation">
         <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+          <li><a href="/services" class="nav-link">Services</a></li>
+          <li><a href="/gallery" class="nav-link">Gallery</a></li>
+          <li><a href="/contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -56,11 +66,11 @@
   <!-- Mobile Fullscreen Drawer Menu -->
   <div class="mobile-drawer" id="mobile-menu">
     <ul class="mobile-nav-list">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-      <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+      <li><a href="/about" class="mobile-nav-link">About</a></li>
+      <li><a href="/services" class="mobile-nav-link">Services</a></li>
+      <li><a href="/gallery" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
     </ul>
     <div class="mobile-drawer-footer">
       <a href="https://wa.me/917999321717?text=Hello%20Qubool%20Hai%20Events%20%26%20Decor%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
@@ -195,11 +205,11 @@
         <div>
           <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="about.html" class="footer-link">About Azhar Kazi</a></li>
-            <li><a href="services.html" class="footer-link">Bespoke Services</a></li>
-            <li><a href="gallery.html" class="footer-link">Portfolio &amp; Gallery</a></li>
-            <li><a href="contact.html" class="footer-link">Reserve Date &amp; Contact</a></li>
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/about" class="footer-link">About Azhar Kazi</a></li>
+            <li><a href="/services" class="footer-link">Bespoke Services</a></li>
+            <li><a href="/gallery" class="footer-link">Portfolio &amp; Gallery</a></li>
+            <li><a href="/contact" class="footer-link">Reserve Date &amp; Contact</a></li>
           </ul>
         </div>
 
@@ -207,10 +217,10 @@
         <div>
           <h4 class="footer-col-title">Decor Specialties</h4>
           <ul class="footer-links-list">
-            <li><a href="services.html#nikah" class="footer-link">Nikah Stage Scenography</a></li>
-            <li><a href="services.html#backdrop" class="footer-link">Baby Pink Arch Backdrops</a></li>
-            <li><a href="services.html#floral" class="footer-link">Fresh Rose Cascades</a></li>
-            <li><a href="services.html#lighting" class="footer-link">Royal &amp; Ambient Lighting</a></li>
+            <li><a href="/services#nikah" class="footer-link">Nikah Stage Scenography</a></li>
+            <li><a href="/services#backdrop" class="footer-link">Baby Pink Arch Backdrops</a></li>
+            <li><a href="/services#floral" class="footer-link">Fresh Rose Cascades</a></li>
+            <li><a href="/services#lighting" class="footer-link">Royal &amp; Ambient Lighting</a></li>
           </ul>
         </div>
 
@@ -237,7 +247,7 @@
           &copy; 2026 Qubool Hai Events &amp; Decor. All rights reserved.
         </div>
         <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; align-items: center;">
-          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="/privacy-policy" class="footer-legal-link">Privacy Policy</a>
           <span>Indore, MP</span>
         </div>
       </div>

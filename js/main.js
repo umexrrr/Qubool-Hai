@@ -3,6 +3,20 @@
  * Baby Pink × White Contemporary Experience
  */
 
+// Instant URL Cleaner: Strip .html and index.html from URL bar
+(function cleanUrl() {
+  try {
+    const p = window.location.pathname;
+    if (p.endsWith('/index.html') || p === '/index.html' || p.endsWith('index.html')) {
+      const clean = p.replace(/index\.html$/, '') + window.location.search + window.location.hash;
+      window.history.replaceState(null, '', clean || '/');
+    } else if (p.endsWith('.html')) {
+      const clean = p.replace(/\.html$/, '') + window.location.search + window.location.hash;
+      window.history.replaceState(null, '', clean);
+    }
+  } catch (err) {}
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initMobileMenu();
@@ -384,13 +398,18 @@ function initPageTransitions() {
   if (!veil) return;
 
   // Intercept internal page navigation links
-  const links = document.querySelectorAll('a[href$=".html"], a[href="/about"], a[href="/services"], a[href="/gallery"], a[href="/contact"], a[href="/"]');
+  const links = document.querySelectorAll('a[href^="/"], a[href$=".html"]');
 
   links.forEach(link => {
     link.addEventListener('click', (e) => {
       const targetHref = link.getAttribute('href');
       // Ignore anchors or external links
-      if (!targetHref || targetHref.startsWith('#') || targetHref.startsWith('http') || targetHref.startsWith('mailto') || targetHref.startsWith('tel') || targetHref.startsWith('wa.me')) {
+      if (!targetHref || targetHref.startsWith('#') || targetHref.startsWith('http') || targetHref.startsWith('mailto') || targetHref.startsWith('tel') || targetHref.includes('wa.me')) {
+        return;
+      }
+
+      // If linking to hash on current page, don't trigger veil
+      if (targetHref.startsWith(window.location.pathname + '#')) {
         return;
       }
 
@@ -399,7 +418,7 @@ function initPageTransitions() {
 
       setTimeout(() => {
         window.location.href = targetHref;
-      }, 500);
+      }, 400);
     });
   });
 }
