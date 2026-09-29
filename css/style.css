@@ -2043,3 +2043,173 @@ h4 {
     gap: 0.75rem;
   }
 }
+
+/* ==========================================================================
+   ACCESSIBILITY & USER PREFERENCES
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  #petal-canvas {
+    display: none !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-rose-gold);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   BREADCRUMBS NAVIGATION (SEO & Hierarchy)
+   ========================================================================== */
+.breadcrumbs-nav {
+  padding: 1.25rem 0 0.5rem;
+}
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.breadcrumbs-list a {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+.breadcrumbs-list a:hover {
+  color: var(--text-rose);
+}
+.breadcrumbs-separator {
+  color: var(--border-pink-medium);
+  font-size: 0.8rem;
+  user-select: none;
+}
+.breadcrumbs-current {
+  color: var(--text-rose);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   FAQ SECTION (Schema-aligned visible FAQs)
+   ========================================================================== */
+.faq-section {
+  padding: 4.5rem 0;
+  background: var(--bg-soft-white);
+  border-top: 1px solid var(--border-pink-delicate);
+  border-bottom: 1px solid var(--border-pink-delicate);
+}
+.faq-grid {
+  display: grid;
+  gap: 1.35rem;
+  max-width: 860px;
+  margin: 2.25rem auto 0;
+}
+.faq-card {
+  background: var(--bg-pure);
+  border: 1px solid var(--border-pink-delicate);
+  border-radius: 14px;
+  padding: 1.6rem 1.85rem;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-subtle);
+}
+.faq-card:hover {
+  border-color: var(--border-pink-medium);
+  box-shadow: var(--shadow-medium);
+}
+.faq-question {
+  font-family: var(--font-serif);
+  font-size: 1.28rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.65rem;
+  line-height: 1.4;
+}
+.faq-answer {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   SERVICE DETAIL TEMPLATE STYLES
+   ========================================================================== */
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.service-detail-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.service-gallery-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-pink-delicate);
+}
+.service-gallery-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-gallery-card:hover img {
+  transform: scale(1.04);
+}
+.service-feature-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.5rem 0 2rem;
+}
+.service-feature-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.service-feature-checklist li svg {
+  flex-shrink: 0;
+  color: var(--text-rose);
+  margin-top: 3px;
+}
+.service-local-note {
+  background: var(--bg-baby-pink);
+  border-left: 3px solid var(--accent-rose-gold);
+  padding: 1.25rem 1.6rem;
+  border-radius: 0 12px 12px 0;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+}
+@media (max-width: 580px) {
+  .service-detail-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
