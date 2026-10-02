@@ -17,6 +17,14 @@
   } catch (err) {}
 })();
 
+// Immediate BFCache Safeguard: drop any stuck transition veil as early as possible
+window.addEventListener('pageshow', () => {
+  const veil = document.querySelector('.page-veil');
+  if (veil) {
+    veil.classList.remove('is-active');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initMobileMenu();
@@ -45,6 +53,7 @@ function initNavbarScroll() {
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('pageshow', handleScroll);
   handleScroll(); // Initial check
 }
 
@@ -58,6 +67,12 @@ function initMobileMenu() {
 
   if (!toggle || !drawer) return;
 
+  const closeMenu = () => {
+    drawer.classList.remove('is-open');
+    toggle.classList.remove('is-active');
+    document.body.style.overflow = '';
+  };
+
   const toggleMenu = () => {
     const isOpen = drawer.classList.toggle('is-open');
     toggle.classList.toggle('is-active', isOpen);
@@ -67,12 +82,11 @@ function initMobileMenu() {
   toggle.addEventListener('click', toggleMenu);
 
   links.forEach(link => {
-    link.addEventListener('click', () => {
-      drawer.classList.remove('is-open');
-      toggle.classList.remove('is-active');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
   });
+
+  // Ensure menu is closed when restored from Back/Forward cache
+  window.addEventListener('pageshow', closeMenu);
 }
 
 /* ==========================================================================
@@ -168,13 +182,20 @@ function initFloatingPetals() {
     animationFrameId = requestAnimationFrame(render);
   };
 
-  // Pause when tab is invisible
+  // Pause when tab is invisible to save battery/resources
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      cancelAnimationFrame(animationFrameId);
-    } else {
+    cancelAnimationFrame(animationFrameId);
+    if (!document.hidden) {
       render();
     }
+  });
+
+  // Restart canvas animation when navigating back/forward from bfcache
+  window.addEventListener('pageshow', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    cancelAnimationFrame(animationFrameId);
+    render();
   });
 
   render();
@@ -397,19 +418,39 @@ function initPageTransitions() {
   const veil = document.querySelector('.page-veil');
   if (!veil) return;
 
+  const clearVeil = () => {
+    veil.classList.remove('is-active');
+  };
+
+  // Ensure veil is never stuck active on initial load or when navigating via browser Back/Forward (bfcache)
+  clearVeil();
+  window.addEventListener('pageshow', clearVeil);
+  window.addEventListener('pagehide', clearVeil);
+  window.addEventListener('popstate', clearVeil);
+
   // Intercept internal page navigation links
   const links = document.querySelectorAll('a[href^="/"], a[href$=".html"]');
 
   links.forEach(link => {
     link.addEventListener('click', (e) => {
+      // Don't intercept if user is opening in new tab or using modifier keys
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+        return;
+      }
+
+      // Don't intercept links configured to open in a new window/tab
+      if (link.getAttribute('target') === '_blank') {
+        return;
+      }
+
       const targetHref = link.getAttribute('href');
       // Ignore anchors or external links
       if (!targetHref || targetHref.startsWith('#') || targetHref.startsWith('http') || targetHref.startsWith('mailto') || targetHref.startsWith('tel') || targetHref.includes('wa.me')) {
         return;
       }
 
-      // If linking to hash on current page, don't trigger veil
-      if (targetHref.startsWith(window.location.pathname + '#')) {
+      // If linking to hash on current page or same path, don't trigger veil
+      if (targetHref === window.location.pathname || targetHref.startsWith(window.location.pathname + '#')) {
         return;
       }
 
@@ -418,7 +459,10 @@ function initPageTransitions() {
 
       setTimeout(() => {
         window.location.href = targetHref;
-      }, 400);
+      }, 350);
+
+      // Safety timeout: automatically remove veil if navigation is delayed or cancelled
+      setTimeout(clearVeil, 1500);
     });
   });
 }
